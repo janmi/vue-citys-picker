@@ -1,8 +1,10 @@
 <template>
-  
+  <scroller></scroller>
 </template>
 <script>
   require('../node_modules/anima-vue-scroller/dist/app.css')
+  import CityData from '../static/json/citydata.json'
+  console.log(CityData)
   import Scroller from 'anima-vue-scroller'
   export default {
     name: 'addressPicker',
@@ -11,7 +13,19 @@
       return {
         province: [],
         city: [],
-        area: []
+        area: [],
+        scrollData: [
+          {
+            defaultValue: '0',
+            data: []
+          }, {
+            defaultValue: '0',
+            data: []
+          }, {
+            defaultValue: '0',
+            data: []
+          }
+        ]
       }
     },
     methods: {}
