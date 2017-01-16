@@ -1,0 +1,48 @@
+{
+  "name": "vue-address-picker",
+  "version": "1.0.0",
+  "description": "移动端 vue 省市区选择组件",
+  "main": "dist/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janmi/vue-address-picker.git"
+  },
+  "keywords": [
+    "address",
+    "picker",
+    "vue"
+  ],
+  "author": "janmi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janmi/vue-address-picker/issues"
+  },
+  "homepage": "https://github.com/janmi/vue-address-picker#readme",
+  "devDependencies": {
+    "anima-vue-scroller": "^1.1.1",
+    "babel-core": "^6.0.0",
+    "babel-loader": "^6.0.0",
+    "cooking": "^1.0.0",
+    "cooking-lint": "^0.1.4",
+    "cooking-vue": "^0.5.2",
+    "css-loader": "^0.24.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "extract-text-webpack-plugin": "^1.0.0 || ^2.0.0-beta",
+    "file-loader": "^0.9.0",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.9.0",
+    "json-loader": "^0.5.4",
+    "postcss": "^5.1.0",
+    "postcss-loader": "^0.11.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "vue": "^2.1.8",
+    "webpack": "^1.12.0 || ^2.1.0-beta",
+    "webpack-dev-server": "^1.14.0 || ^2.1.0-beta"
+  }
+}
