@@ -3,12 +3,12 @@
 </template>
 <script>
   require('../node_modules/anima-vue-scroller/dist/app.css')
-  import CityData from '../static/json/citydata.json'
+  // import CityData from '../static/json/citydata.json'
   import Scroller from 'anima-vue-scroller'
   export default {
     name: 'addressPicker',
     components: { Scroller },
-    props: ['initValue'],
+    props: ['initValue', 'city'],
     data () {
       return {
         defaultValue: [{
@@ -37,34 +37,38 @@
       }
     },
     created () {
-      this.defaultValue = this.initValue || this.defaultValue
-      this.readProvince(this.defaultValue[0])
-      this.readCity(this.defaultValue[1])
-      this.readArea(this.defaultValue[1])
+      if (!this.city) {
+        console.error('省市区数据不能为空！')
+      } else {
+        this.defaultValue = this.initValue || this.defaultValue
+        this.readProvince(this.defaultValue[0])
+        this.readCity(this.defaultValue[1])
+        this.readArea(this.defaultValue[1])
 
-      this.scrollData[0].data = this.provinceData
-      this.scrollData[0].defaultValue = this.defaultValue[0].value
-      this.scrollData[1].data = this.cityData
-      this.scrollData[1].defaultValue = this.defaultValue[1].value
-      this.scrollData[2].data = this.areaData
-      this.scrollData[2].defaultValue = this.defaultValue[2].value
+        this.scrollData[0].data = this.provinceData
+        this.scrollData[0].defaultValue = this.defaultValue[0].value
+        this.scrollData[1].data = this.cityData
+        this.scrollData[1].defaultValue = this.defaultValue[1].value
+        this.scrollData[2].data = this.areaData
+        this.scrollData[2].defaultValue = this.defaultValue[2].value
 
-      this.selectValue[0] = this.defaultValue[0]
-      this.selectValue[1] = this.defaultValue[1]
-      this.selectValue[2] = this.defaultValue[2]
+        this.selectValue[0] = this.defaultValue[0]
+        this.selectValue[1] = this.defaultValue[1]
+        this.selectValue[2] = this.defaultValue[2]
+      }
     },
     methods: {
       // 读取省份数据
       readProvince (options) {
         this.provinceData = []
         options = options || {
-          value: CityData[0].code,
-          name: CityData[0].name
+          value: this.city[0].code,
+          name: this.city[0].name
         }
         this.provinceIndex = 0
         var obj = {}
-        if (CityData) {
-          var data = CityData
+        if (this.city) {
+          var data = this.city
           for (var i = 0, len = data.length; i < len; i++) {
             obj.name = data[i].name
             obj.value = data[i].code
@@ -82,12 +86,12 @@
         this.cityData = []
         this.cityIndex = 0
         options = options || {
-          value: CityData[0].code,
-          name: CityData[0].name
+          value: this.city[0].code,
+          name: this.city[0].name
         }
         var obj = {}
-        if (CityData) {
-          var data = CityData[this.provinceIndex].children
+        if (this.city) {
+          var data = this.city[this.provinceIndex].children
           for (var i = 0, len = data.length; i < len; i++) {
             obj.name = data[i].name
             obj.value = data[i].code
@@ -108,9 +112,9 @@
           name: this.cityData[0].name
         }
         var obj = {}
-        if (CityData) {
+        if (this.city) {
           // 根据保存的省、市索引直接获取到区的数据，节省两个外套循环
-          var data = CityData[this.provinceIndex].children[this.cityIndex].children
+          var data = this.city[this.provinceIndex].children[this.cityIndex].children
           for (let i = 0, len = data.length; i < len; i++) {
             obj.name = data[i].name
             obj.value = data[i].code
@@ -159,10 +163,9 @@
         // this.$emit('change', values)
       },
       open () {
-        this.$refs['scroller'].open()
-      },
-      show (name) {
-        this.open()
+        if (this.city) {
+          this.$refs['scroller'].open()
+        }
       }
     }
   }

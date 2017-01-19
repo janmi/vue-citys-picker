@@ -10,12 +10,13 @@
 <template>
   <div id="app">
   <span class="show" @click="show('address')">show address</span>
-    <address-picker :init-value="defaultVal" @confirm="confirm" ref="address"></address-picker>
+    <address-picker :city="data" :init-value="defaultVal" @confirm="confirm" ref="address"></address-picker>
   </div>
 </template>
 
 <script>
 import AddressPicker from '../src/index.js'
+import CityData from '../static/json/citydata.json'
 export default {
   name: 'app',
   components: {
@@ -23,6 +24,7 @@ export default {
   },
   data () {
     return {
+      data: CityData,
       scrollData: [{
         defaultValue: 1,
         data: [{
