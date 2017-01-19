@@ -1,4 +1,4 @@
 import AddressPicker from './address-picker.vue'
-module.export = AddressPicker
+export default AddressPicker
 
 window.addressPicker = AddressPicker

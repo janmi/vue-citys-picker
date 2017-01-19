@@ -1,9 +1,9 @@
 var cooking = require('cooking')
 cooking.set({
-  entry: './src/index.js',
+  entry: './example/main.js', // ./src/index.js
   dist: './dist',
   template: './index.html',
-    devServer: {
+  devServer: {
     // 是否启用
     enable: true,
     // 输出文件目录的 URL 路径，注意这里的配置会覆盖下面的 publicPath
@@ -14,8 +14,8 @@ cooking.set({
     extractCSS: false,
     // 显示日志信息在页面上
     log: true,
-    port: 8080,
-    hostname: 'localhost',
+    port: 3000,
+    hostname: '192.168.0.70',
     protocol: 'http:',
     // HTML5 history API
     historyApiFallback: true,

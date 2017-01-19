@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/janmi/vue-address-picker#readme",
   "devDependencies": {
-    "anima-vue-scroller": "^1.1.1",
+    "anima-vue-scroller": "^1.1.3",
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
     "cooking": "^1.0.0",
