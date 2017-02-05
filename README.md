@@ -66,4 +66,4 @@ export default {
 }]
 ```
 #DEMO
-[!demo](https://ooo.0o0.ooo/2017/02/05/5896a0e98d428.gif)
+![demo](https://ooo.0o0.ooo/2017/02/05/5896a0e98d428.gif)
