@@ -1,4 +1,4 @@
-import AddressPicker from './address-picker.vue'
-export default AddressPicker
+import CitysPicker from './citys-picker.vue'
+export default CitysPicker
 
-window.addressPicker = AddressPicker
+window.citysPicker = CitysPicker

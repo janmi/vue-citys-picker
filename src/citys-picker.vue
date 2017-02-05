@@ -6,7 +6,7 @@
   // import CityData from '../static/json/citydata.json'
   import Scroller from 'anima-vue-scroller'
   export default {
-    name: 'addressPicker',
+    name: 'citysPicker',
     components: { Scroller },
     props: ['initValue', 'city'],
     data () {
@@ -125,7 +125,7 @@
       },
       addressConfirm (values) {
         this.$emit('confirm', values)
-        // console.log(values)
+        console.log(values)
       },
       addressClaer (values) {
         // console.log('x')

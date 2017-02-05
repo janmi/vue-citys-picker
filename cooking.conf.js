@@ -1,8 +1,8 @@
 var cooking = require('cooking')
 cooking.set({
-  entry: './src/index.js', // ./example/main.js
+  entry: './example/main.js', // ./src/index.js
   dist: './dist',
-  // template: './index.html',
+  template: './index.html',
   devServer: {
     // 是否启用
     enable: true,
@@ -15,7 +15,7 @@ cooking.set({
     // 显示日志信息在页面上
     log: true,
     port: 3000,
-    hostname: '192.168.0.70',
+    hostname: '192.168.1.109',
     protocol: 'http:',
     // HTML5 history API
     historyApiFallback: true,

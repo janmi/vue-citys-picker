@@ -1,5 +1,5 @@
 {
-  "name": "vue-address-picker",
+  "name": "vue-citys-picker",
   "version": "1.0.0",
   "description": "移动端 vue 省市区选择组件",
   "main": "dist/app.js",
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/janmi/vue-address-picker#readme",
   "devDependencies": {
-    "anima-vue-scroller": "^1.1.3",
+    "anima-vue-scroller": "^1.1.4",
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
     "cooking": "^1.0.0",
@@ -42,6 +42,7 @@
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "vue": "^2.1.8",
+    "vue-scroller": "^2.1.0",
     "webpack": "^1.12.0 || ^2.1.0-beta",
     "webpack-dev-server": "^1.14.0 || ^2.1.0-beta"
   }

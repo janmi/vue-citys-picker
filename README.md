@@ -1,30 +1,30 @@
-# vue-address-picker
-vue address picker
+# vue-citys-picker
+vue citys picker（三级联动）
 
 ## Install
 
 ``` bash
 # install dependencies
-npm install vue-address-picker --save
+npm install vue-citys-picker --save
 
 ```JavaScript
 require ('dist/app.css');
 
 // ES6 mudule
-import AddressPicker from 'vue-address-picker';
+import CitysPicker from 'vue-citys-picker';
 
 # Usage
 
 ```HTML
 <span @click="show('address')"></span>
-<address-picker :city="data" :init-value="defaultVal" @confirm="confirm" ref="address"></address-picker>
+<citys-picker :city="data" :init-value="defaultVal" @confirm="confirm" ref="citys"></citys-picker>
 ```
 
 ```JavaScript
 export default {
   name: 'app',
   components: {
-    AddressPicker
+    CitysPicker
   },
   data () {
     return {

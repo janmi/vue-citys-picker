@@ -2,25 +2,26 @@
 @import url(../static/less/common.less);
   .show{
     display: block;
-    width: 1.333333rem;
+    // width: 3.333333rem;
     height: 1.333333rem;
     margin: 1.333333rem;
   }
 </style>
 <template>
   <div id="app">
-  <span class="show" @click="show('address')">show address</span>
-    <address-picker :city="data" :init-value="defaultVal" @confirm="confirm" ref="address"></address-picker>
+    <span class="show" @click="show('address')">show address</span>
+    <citys-picker :city="data" :init-value="defaultVal" @confirm="confirm" ref="address"></citys-picker>
+    <p id="J_address" style="text-align: center;">{{addressStr}}</p>
   </div>
 </template>
 
 <script>
-import AddressPicker from '../src/index.js'
+import CitysPicker from '../src/index.js'
 import CityData from '../static/json/citydata.json'
 export default {
   name: 'app',
   components: {
-    AddressPicker
+    CitysPicker
   },
   data () {
     return {
@@ -59,14 +60,16 @@ export default {
       }, {
         name: '北辰区',
         value: '120113'
-      }]
+      }],
+      addressStr: ''
     }
   },
   mounted () {
   },
   methods: {
     confirm (values) {
-      console.log(values)
+      // console.log(values)
+      this.addressStr = values[0].name + '-' + values[1].name + '-' + values[2].name
     },
     show (name) {
       this.$refs[name].open()
