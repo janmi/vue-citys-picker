@@ -1,5 +1,5 @@
 # vue-citys-picker
-vue citys picker（三级联动）
+vue citys picker（三级联动省市区选择组件）
 
 ## Install
 
@@ -65,3 +65,5 @@ export default {
   }]
 }]
 ```
+#DEMO
+[!demo](https://ooo.0o0.ooo/2017/02/05/5896a0e98d428.gif)
