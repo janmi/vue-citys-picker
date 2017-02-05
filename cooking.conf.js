@@ -1,8 +1,8 @@
 var cooking = require('cooking')
 cooking.set({
-  entry: './example/main.js', // ./src/index.js
+  entry: './src/index.js', // ./src/index.js
   dist: './dist',
-  template: './index.html',
+  // template: './index.html',
   devServer: {
     // 是否启用
     enable: true,

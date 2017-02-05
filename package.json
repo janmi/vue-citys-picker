@@ -1,6 +1,6 @@
 {
   "name": "vue-citys-picker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "移动端 vue 省市区选择组件",
   "main": "dist/app.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/janmi/vue-address-picker.git"
+    "url": "git+https://github.com/janmi/vue-citys-picker.git"
   },
   "keywords": [
     "address",
@@ -18,9 +18,9 @@
   "author": "janmi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/janmi/vue-address-picker/issues"
+    "url": "https://github.com/janmi/vue-citys-picker/issues"
   },
-  "homepage": "https://github.com/janmi/vue-address-picker#readme",
+  "homepage": "https://github.com/janmi/vue-citys-picker#readme",
   "devDependencies": {
     "anima-vue-scroller": "^1.1.4",
     "babel-core": "^6.0.0",
