@@ -2,7 +2,7 @@
   <scroller @confirm="addressConfirm" ref="scroller" @claer="addressClaer" @change="addressChange" :scroll="scrollData"></scroller>
 </template>
 <script>
-  require('../node_modules/anima-vue-scroller/dist/app.css')
+  require('anima-vue-scroller/dist/anima-vue-scroller.css')
   // import CityData from '../static/json/citydata.json'
   import Scroller from 'anima-vue-scroller'
   export default {

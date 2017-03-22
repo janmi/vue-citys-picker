@@ -1,6 +1,9 @@
 var cooking = require('cooking')
 cooking.set({
-  entry: './src/index.js', // ./src/index.js
+  entry: {
+    'vue-citys-picker': './src/index.js'
+  },
+  // entry: './example/main.js',
   dist: './dist',
   // template: './index.html',
   devServer: {
@@ -15,7 +18,7 @@ cooking.set({
     // 显示日志信息在页面上
     log: true,
     port: 3000,
-    hostname: '192.168.1.109',
+    hostname: 'localhost',
     protocol: 'http:',
     // HTML5 history API
     historyApiFallback: true,
@@ -26,7 +29,7 @@ cooking.set({
     lazy: false
   },
   assetsPath: './static',
-  moduleName: 'vue-address-picker',
+  moduleName: 'vue-citys-picker',
   chunk: false,
   format: 'umd', //var\cjs
   // Production

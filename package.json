@@ -1,8 +1,9 @@
 {
   "name": "vue-citys-picker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "移动端 vue 省市区选择组件",
-  "main": "dist/app.js",
+  "main": "dist/vue-citys-picker.js",
+  "style": "dist/vue-citys-picker.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,7 +23,7 @@
   },
   "homepage": "https://github.com/janmi/vue-citys-picker#readme",
   "devDependencies": {
-    "anima-vue-scroller": "^1.1.4",
+    "anima-vue-scroller": "^1.1.9",
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
     "cooking": "^1.0.0",

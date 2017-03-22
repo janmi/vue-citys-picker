@@ -6,7 +6,7 @@ npm install vue-citys-picker --save
 
 ```
 JavaScript
-require ('dist/app.css');
+require ('vue-citys-picker/dist/vue-citys-picker.css');
 
 // ES6 mudule
 import CitysPicker from 'vue-citys-picker';
