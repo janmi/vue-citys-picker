@@ -68,8 +68,9 @@ export default {
   },
   methods: {
     confirm (values) {
-      // console.log(values)
-      this.addressStr = values[0].name + '-' + values[1].name + '-' + values[2].name
+      let area = values[2].name ? `-${values[2].name}` : ''
+      this.addressStr = values[0].name + '-' + values[1].name
+      this.addressStr = this.addressStr + area
     },
     show (name) {
       this.$refs[name].open()
