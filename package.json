@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/janmi/vue-citys-picker#readme",
   "devDependencies": {
-    "anima-vue-scroller": "^1.1.9",
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
     "cooking": "^1.0.0",
@@ -42,9 +41,11 @@
     "postcss-loader": "^0.11.1",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "vue": "^2.1.8",
-    "vue-scroller": "^2.1.0",
     "webpack": "^1.12.0 || ^2.1.0-beta",
     "webpack-dev-server": "^1.14.0 || ^2.1.0-beta"
+  },
+  "dependencies": {
+    "anima-vue-scroller": "^1.1.9",
+    "vue": "^2.1.8"
   }
 }
