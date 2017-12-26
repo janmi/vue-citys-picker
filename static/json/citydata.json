@@ -11517,17 +11517,11 @@
   "children": [{
     "code": "820100",
     "name": "澳门半岛",
-    "children": [{
-        "code": "000000",
-        "name": "暂不选择"
-      }]
+    "children": []
   }, {
     "code": "820200",
     "name": "离岛",
-    "children": [{
-        "code": "000000",
-        "name": "暂不选择"
-      }]
+    "children": []
   }]
 }, {
   "code": "710000",

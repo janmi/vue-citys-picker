@@ -115,21 +115,25 @@
         if (this.city) {
           // 根据保存的省、市索引直接获取到区的数据，节省两个外套循环
           var data = this.city[this.provinceIndex].children[this.cityIndex].children
-          for (let i = 0, len = data.length; i < len; i++) {
-            obj.name = data[i].name
-            obj.value = data[i].code
-            this.areaData.push(obj)
-            obj = {}
+          if (data.length) {
+            for (let i = 0, len = data.length; i < len; i++) {
+              obj.name = data[i].name
+              obj.value = data[i].code
+              this.areaData.push(obj)
+              obj = {}
+            }
+          } else {
+            this.areaData.push({
+              name: '',
+              value: ''
+            })
           }
         }
       },
       addressConfirm (values) {
         this.$emit('confirm', values)
-        console.log(values)
       },
-      addressClaer (values) {
-        // console.log('x')
-      },
+      addressClaer (values) {},
       addressChange (values) {
         const that = this
         if (values[0].value !== that.selectValue[0].value) {
