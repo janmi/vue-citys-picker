@@ -1,8 +1,10 @@
 var cooking = require('cooking')
-cooking.set({
-  entry: {
-    'vue-citys-picker': './src/index.js'
-  },
+var devCon = require('./cooking.dev.conf.js')
+var prodCon = require('./cooking.prod.conf.js')
+let config = {
+  // entry: {
+  //   'vue-citys-picker': './src/index.js'
+  // },
   // entry: './example/main.js',
   dist: './dist',
   // template: './index.html',
@@ -41,6 +43,13 @@ cooking.set({
   alias: {
     'src': require('path').join(__dirname, './src')
   }
-})
+}
+
+if(process.env.NODE_ENV === 'production') {
+  config = Object.assign({}, config, prodCon)
+} else {
+  config = Object.assign({}, config, devCon)
+}
+cooking.set(config)
 
 module.exports = cooking.resolve()
